@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: sv-nc-app
+spec:
+  selector:
+    app: pod-nc-app
+  type: LoadBalancer                      # ClusterIP, NodePort, LoadBalancer, ExternalName
+  #  sessionAffinity: ClientIP
+  ports:
+  - nodePort: 30004
+    port: 80
+    targetPort: 80

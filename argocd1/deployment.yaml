@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dep-nc-ap
+spec:
+  replicas: 4
+  selector:
+    matchLabels:
+      app: pod-nc-app
+  template:
+    metadata:
+      labels:
+        app: pod-nc-app
+    spec:
+      restartPolicy: Always            # Always, OnFailure, Never
+      containers:
+      - name: nc-app
+        image: nginx
+        imagePullPolicy: IfNotPresent  # Always, IfNotPresent, Never
