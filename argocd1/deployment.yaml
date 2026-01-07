@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: dep-nc-app
 spec:
-  replicas: 4
+  replicas: 1
   selector:
     matchLabels:
       app: pod-nc-app
