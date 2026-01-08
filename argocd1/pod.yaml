@@ -8,5 +8,5 @@ spec:
   restartPolicy: Always            # Always, OnFailure, Never
   containers:
   - name: tomcat
-    image: google/ipython-predictions
+    image: tomcat:10.1
     imagePullPolicy: IfNotPresent  # Always, IfNotPresent, Never
