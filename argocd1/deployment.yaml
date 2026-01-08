@@ -15,5 +15,5 @@ spec:
       restartPolicy: Always            # Always, OnFailure, Never
       containers:
       - name: nc-app
-        image: tomcat:10.1
+        image: nginx
         imagePullPolicy: IfNotPresent  # Always, IfNotPresent, Never
