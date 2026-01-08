@@ -4,7 +4,6 @@ metadata:
   name: tomcat
   labels:
     app: pod-nc-app
-    type: front-end
 spec:
   restartPolicy: Always            # Always, OnFailure, Never
   containers:
