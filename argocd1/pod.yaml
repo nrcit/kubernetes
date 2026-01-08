@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: tomcat
+  labels:
+    app: pod-nc-app
+    type: front-end
+spec:
+  restartPolicy: Always            # Always, OnFailure, Never
+  containers:
+  - name: tomcat
+    image: tomcat
+    imagePullPolicy: IfNotPresent  # Always, IfNotPresent, Never
