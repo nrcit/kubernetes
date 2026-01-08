@@ -7,6 +7,6 @@ metadata:
 spec:
   restartPolicy: Always            # Always, OnFailure, Never
   containers:
-  - name: tomcat
+  - name: pod-nc-app
     image: tomcat:10.1
     imagePullPolicy: IfNotPresent  # Always, IfNotPresent, Never
